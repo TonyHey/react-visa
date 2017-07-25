@@ -13,12 +13,14 @@ const { Sider } = Layout
 export default class Container extends React.Component {
     state = {
         theme: "dark",
-        current: "index",
+        current: "home",
         collapsed: false,
         mode: "inline",
     }
     componentDidMount() {
-        this.handleClick([], "index")
+        const path = this.props.location.pathname.split("/")
+        const selectedKey = !path[path.length - 1] ? "home" : path[path.length - 1]
+        this.handleClick([], selectedKey)
     }
     changeTheme = value => {
         this.setState({
@@ -36,7 +38,7 @@ export default class Container extends React.Component {
         })
     }
     clear = () => {
-        this.setState({ current: "index" })
+        this.setState({ current: "home" })
     }
     handleClick = (e, special) => {
         this.setState({
@@ -87,7 +89,7 @@ export default class Container extends React.Component {
                             }
                             return (
                                 <Menu.Item key={subMenu.url}>
-                                    <Link to={`/${subMenu.url}`}>
+                                    <Link to={`/${subMenu.url === "home" ? "" : subMenu.url}`}>
                                         <Icon type={subMenu.icon} />
                                         <span className="nav-text">{subMenu.name}</span>
                                     </Link>
