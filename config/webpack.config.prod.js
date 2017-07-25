@@ -166,7 +166,10 @@ module.exports = {
         include: paths.appSrc,
         loader: require.resolve('babel-loader'),
         options: {
-
+            plugins: [
+              "transform-decorators-legacy",
+              ["import", { libraryName: "antd", style: "css" }]
+            ],
           compact: true,
         },
       },
