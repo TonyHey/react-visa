@@ -1,7 +1,7 @@
 import React from "react"
 import { Form, Input, Button, notification, Icon } from "antd"
 
-import "./index.scss"
+import styles from "./index.scss"
 
 const FormItem = Form.Item
 
@@ -32,10 +32,10 @@ class LoginPage extends React.Component {
     render() {
         const { getFieldDecorator } = this.props.form
         return (
-            <div className="loginpagewrap">
-                <div className="box">
+            <div className={styles.loginpagewrap}>
+                <div className={styles.box}>
                     <p>Welcome</p>
-                    <div className="loginWrap">
+                    <div className={styles.loginWrap}>
                         <Form onSubmit={this.handleSubmit}>
                             <FormItem>
                                 {getFieldDecorator("username", {
@@ -57,7 +57,7 @@ class LoginPage extends React.Component {
                                     ]
                                 })(<Input type="password" placeholder="Password" />)}
                             </FormItem>
-                            <Button type="primary" htmlType="submit" className="loginBtn">Login</Button>
+                            <Button type="primary" htmlType="submit" className={styles.loginBtn}>Login</Button>
                         </Form>
                     </div>
                 </div>
