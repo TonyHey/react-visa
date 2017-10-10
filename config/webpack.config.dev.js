@@ -108,14 +108,14 @@ module.exports = {
       // TODO: Disable require.ensure as it's not a standard language feature.
       // We are waiting for https://github.com/facebookincubator/create-react-app/issues/2176.
       // { parser: { requireEnsure: false } },
-      {
-          // 匹配routers下面所有文件
-          // ([^/]+)\/?([^/]*) 匹配xxx/xxx 或者 xxx
-          test: /(container|pages)\/([^/]+)\/?([^/]*)\.jsx?$/,
-          include: paths.appSrc + "/client/routes/",
-          // loader: 'bundle-loader?lazy'
-          loaders: ['bundle-loader?lazy', 'babel-loader']
-      },
+    //   {
+    //       // 匹配routers下面所有文件
+    //       // ([^/]+)\/?([^/]*) 匹配xxx/xxx 或者 xxx
+    //       test: /(container|pages)\/([^/]+)\/?([^/]*)\.jsx?$/,
+    //       include: paths.appSrc + "/client/routes/",
+    //       // loader: 'bundle-loader?lazy'
+    //       loaders: ['bundle-loader?lazy', 'babel-loader']
+    //   },
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
