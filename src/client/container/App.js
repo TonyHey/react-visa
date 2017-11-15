@@ -51,14 +51,14 @@ export default class Container extends React.Component {
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse} className="leftMenu">
                     {this.state.theme === "light"
                         ? <a
-                            rel={node => node}
+                            rel="noopener noreferrer"
                             href="https://github.com/tonyhey"
                             target="_blank"
                         >
                             <Icon type="github" className="github" />
                         </a>
                         : <a
-                            rel={node => node}
+                            rel="noopener noreferrer"
                             href="https://github.com/tonyhey"
                             target="_blank"
                         >
