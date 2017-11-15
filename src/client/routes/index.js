@@ -1,22 +1,22 @@
 import React from "react"
 import { Switch, Route } from "react-router-dom"
 // import { CSSTransitionGroup } from "react-transition-group"
-import Bundle from "../components/bundle"
+// import Bundle from "../components/bundle"
 // import styles from "./router.scss"
-// import App from "../container/App"
-// import Login from "../pages/login"
+import App from "../container/App"
+import Login from "../pages/login"
 
 
-const App = props => (
-    <Bundle load={() => import("../container/App")}>
-        {Component => <Component {...props} />}
-    </Bundle>
-)
-const Login = props => (
-    <Bundle load={() => import("../pages/login")}>
-        {Component => <Component {...props} />}
-    </Bundle>
-)
+// const App = props => (
+//     <Bundle load={() => import("../container/App")}>
+//         {Component => <Component {...props} />}
+//     </Bundle>
+// )
+// const Login = props => (
+//     <Bundle load={() => import("../pages/login")}>
+//         {Component => <Component {...props} />}
+//     </Bundle>
+// )
 
 const routes = (
     <Switch>
