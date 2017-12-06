@@ -18,7 +18,7 @@ import Login from "../pages/login"
 //     </Bundle>
 // )
 
-const routes = (
+const routes = () => (
     <Switch>
         <Route location={location} key={`${location.key}_0`} path="/login" component={Login} />
         <Route location={location} key={`${location.key}_1`} path="/" component={App} />
